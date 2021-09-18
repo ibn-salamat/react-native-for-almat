@@ -1,1 +1,5 @@
 for m1 - arch -x86_64 pod install 
+
+for android
+
+local.properties file in folder android content: sdk.dir = /Users/Nurlykhan/Library/Android/sdk
