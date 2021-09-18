@@ -6,7 +6,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text style={{ color: "red", fontSize: 30 }}>Альхамдулиллах!</Text>
-      <Text style={{ color: "green", fontSize: 20 }}>Я айос разработчик</Text>
+      <Text style={{ color: "green", fontSize: 20 }}>Я mobile разработчик</Text>
 
       <Button
         title="нажми на меня"
