@@ -16,6 +16,7 @@ import {
 import { TextInput, TouchableOpacity } from "react-native-gesture-handler";
 
 const telegramLink = "https://t.me/ibn_salamat";
+const almat = require("./almat.jpeg");
 
 export default function App() {
   const [textTodo, setTextTodo] = useState("");
@@ -61,15 +62,18 @@ export default function App() {
         <Text style={styles.sectionTitle}>Todolist "Алмат Тормоз"</Text>
       </SafeAreaView>
 
-      <Image
-        style={{ width: "100%", height: 200 }}
-        source={{
-          uri: require("./assets/cat-programming.gif"),
-        }}
-      />
+      <View style={{ display: "flex", alignItems: "center", marginTop: 30 }}>
+        <Image
+          style={{ width: 300, height: 200 }}
+          resizeMode={"cover"}
+          source={{
+            uri: almat,
+          }}
+        />
+      </View>
 
-      <Button
-        title="Write me"
+      <TouchableOpacity
+        style={{ display: "flex", alignItems: "center", marginTop: 10 }}
         onPress={async () => {
           const supportedLink = Linking.canOpenURL(telegramLink);
 
@@ -79,7 +83,9 @@ export default function App() {
             Alert.alert("Can not open url 🥺");
           }
         }}
-      />
+      >
+        <Text style={{ color: "#06c" }}>Write me</Text>
+      </TouchableOpacity>
 
       <ScrollView style={{ marginTop: 30 }}>
         {tasks.map((task) => {
@@ -95,6 +101,7 @@ export default function App() {
             <TouchableOpacity
               style={taskStyle}
               onPress={() => changeTask(task)}
+              key={id}
             >
               <Text style={taskTextStyle}>{title}</Text>
             </TouchableOpacity>
