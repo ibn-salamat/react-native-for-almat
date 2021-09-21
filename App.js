@@ -54,8 +54,6 @@ export default function App() {
     setTasks(newTasks);
   }
 
-  console.log(tasks);
-
   return (
     <View style={{ flex: 1 }}>
       <SafeAreaView style={styles.saveAreaView}>
